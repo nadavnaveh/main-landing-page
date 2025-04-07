@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שם העסק שלכם – פיתוח. ויזואל. בינה מלאכותית.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --background: #1a1a1a;
+        --text-primary: #b2d272; /* ירוק בהיר */
+        --text-secondary: #c9aed3; /* סגול בהיר */
+        --accent: #80b34f; /* ירוק כהה יותר */
+        --dark-accent: #424242; /* אפור כהה */
+        --light-bg: #2a2a2a; /* רקע בהיר יותר */
+        --white: #f0f0f0;
+        --text-white-main: #f5f5f5;
+        --text-white-subtle: #cccccc;
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+    }
+
+    @keyframes blob {
+      0% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    .animate-blob { animation: blob 7s infinite; }
+    .animation-delay-2000 { animation-delay: 2s; }
+    .animation-delay-4000 { animation-delay: 4s; }
+
+    @keyframes slide-up {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-up { animation: slide-up 0.7s ease-out forwards; }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
+    .ease-apple {
+      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .text-gradient-primary {
+      background-image: linear-gradient(to right, var(--text-primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .text-gradient-secondary {
+      background-image: linear-gradient(to right, var(--text-secondary), #a98eb3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .text-gradient-white {
+       background-image: linear-gradient(to right, var(--text-white-main), var(--text-white-subtle));
+       -webkit-background-clip: text;
+       background-clip: text;
+       color: transparent;
+    }
+
+    .includes li::before {
+        content: '✔';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-primary);
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+    .includes li {
+        position: relative;
+        padding-right: 2rem;
+    }
+
+    /* Style for image placeholders */
+    .image-placeholder {
+        aspect-ratio: 1 / 1; /* Square aspect ratio */
+        background-color: var(--dark-accent);
+        border-radius: 0.5rem; /* rounded-lg */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-white-subtle);
+        opacity: 0.5;
+        margin-bottom: 1rem; /* mb-4 */
+        border: 1px solid var(--dark-accent);
+    }
+
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[var(--background)] to-[#222] text-[var(--text-white-main)] transition-colors duration-300">
+
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-20 overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl max-h-6xl">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-[var(--text-primary)]/10 rounded-full blur-3xl opacity-50 animate-blob"></div>
+      <div class="absolute top-0 left-0 w-96 h-96 bg-[var(--text-secondary)]/10 rounded-full blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent)]/10 rounded-full blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
+      <div class="flex flex-col items-center text-center space-y-8">
+        <div class="space-y-6 max-w-3xl animate-slide-up">
+          <div class="inline-block mb-4">
+            <div class="flex items-center gap-2 px-4 py-2 bg-[var(--light-bg)] rounded-full text-sm font-medium text-[var(--text-primary)] border border-[var(--accent)]/50 shadow-sm">
+              <i class="fas fa-star text-sm"></i>
+              <span>המקום שבו חדשנות פוגשת דיוק</span>
+            </div>
+          </div>
+
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gradient-white leading-tight">
+            <span class="text-gradient-primary">מתוכן לתוכנה- פיתוח תוכנה, יצירת תוכן חזותי, וליווי אישי</span> – הכל עם בינה מלאכותית.
+          </h1>
+          <p class="text-xl text-[var(--text-white-subtle)] max-w-2xl mx-auto">
+            אנחנו צוות של מומחים: מפתח תוכנה עם רקע עמוק בבינה מלאכותית ובוגר טכניון, וצלם עטור פרסים המתמחה במידול תמונה ויצירת תוכן ויזואלי עם AI.
+            אנחנו כאן כדי לקחת את הרעיונות שלכם – ולהפוך אותם למציאות טכנולוגית.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 animate-slide-up" style="animation-delay: 0.2s;">
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-[var(--background)] bg-gradient-to-r from-[var(--text-primary)] to-[var(--accent)] hover:brightness-110 shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+            דברו איתנו
+            <i class="fas fa-arrow-left mr-2"></i>
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center px-8 py-3 border border-[var(--dark-accent)] text-[var(--text-white-subtle)] text-base font-medium rounded-full bg-transparent hover:bg-[var(--light-bg)]/50 transition-all">
+            הכירו את השירותים שלנו
+          </a>
+        </div>
+
+        <div class="relative w-full max-w-4xl mx-auto mt-12 animate-slide-up" style="animation-delay: 0.4s;">
+          <div class="aspect-[16/9] bg-gradient-to-br from-[var(--light-bg)]/50 to-[var(--dark-accent)]/50 overflow-hidden rounded-xl border border-[var(--dark-accent)] shadow-2xl shadow-[var(--text-primary)]/5">
+            <div class="absolute inset-0 flex items-center justify-center p-2 sm:p-6">
+               <div class="flex items-center space-x-2 sm:space-x-6 rtl:space-x-reverse">
+                   <div class="flex flex-col space-y-1 sm:space-y-2 items-center">
+                       <div class="w-10 h-10 sm:w-16 sm:h-16 rounded-lg bg-[var(--dark-accent)] border border-[var(--text-secondary)]/30 flex items-center justify-center text-[var(--text-secondary)] opacity-70">
+                         <i class="fas fa-code text-sm sm:text-xl"></i>
+                       </div>
+                       <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-lg bg-[var(--dark-accent)] border border-[var(--text-secondary)]/30 flex items-center justify-center text-[var(--text-secondary)] opacity-50">
+                         <i class="fas fa-laptop-code text-xs sm:text-base"></i>
+                       </div>
+                       <div class="text-[10px] sm:text-xs text-[var(--text-white-subtle)] mt-1">פיתוח מתקדם</div>
+                   </div>
+                   <i class="fas fa-plus text-xl sm:text-3xl text-[var(--accent)] opacity-60"></i>
+                   <div class="flex flex-col items-center">
+                       <div class="w-14 h-14 sm:w-24 sm:h-24 rounded-full border-2 sm:border-4 border-[var(--accent)] flex items-center justify-center bg-[var(--light-bg)] shadow-lg shadow-[var(--accent)]/20">
+                            <i class="fas fa-brain text-xl sm:text-3xl text-[var(--accent)]"></i>
+                       </div>
+                       <div class="text-[10px] sm:text-xs text-[var(--text-white-subtle)] mt-1">בינה מלאכותית</div>
+                   </div>
+                   <i class="fas fa-plus text-xl sm:text-3xl text-[var(--text-primary)] opacity-80"></i>
+                   <div class="flex flex-col items-center">
+                       <div class="w-12 h-12 sm:w-20 sm:h-20 rounded-lg bg-[var(--light-bg)] border-2 border-[var(--text-primary)]/50 flex items-center justify-center text-[var(--text-primary)] shadow-md shadow-[var(--text-primary)]/10">
+                         <i class="fas fa-camera text-lg sm:text-2xl"></i>
+                       </div>
+                       <div class="text-[10px] sm:text-xs text-[var(--text-white-subtle)] mt-1">יצירה חזותית</div>
+                   </div>
+               </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+            <div class="px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-medium bg-[var(--light-bg)]/80 backdrop-blur-md shadow-lg border border-[var(--accent)]/30 text-[var(--text-primary)]">
+              פיתוח מקצועי • טכנולוגיה מתקדמת • יצירתיות חזותית
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section id="about" class="py-20 bg-gradient-to-b from-[#222] to-[var(--background)]">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="inline-block mb-4">
+          <div class="px-4 py-2 bg-[var(--light-bg)] rounded-full text-sm font-medium text-[var(--text-primary)] border border-[var(--accent)]/50">
+            מי אנחנו?
+          </div>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[var(--white)]">
+          הצוות <span class="text-gradient-primary">שעומד מאחורינו</span>
+        </h2>
+        <p class="text-lg text-[var(--text-white-subtle)] max-w-2xl mx-auto">
+          יחד אנחנו מציעים פתרונות שמחברים טכנולוגיה, קריאייטיב ויעילות – ברמה הגבוהה ביותר.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto animate-on-scroll">
+        <!-- First Team Member -->
+        <div class="bg-[var(--light-bg)] rounded-xl shadow-lg border border-[var(--dark-accent)] overflow-hidden hover:shadow-[0_0_20px_rgba(178,210,114,0.15)] transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-r from-[var(--text-primary)] to-[var(--accent)] h-2"></div>
+          <div class="p-8">
+            <div class="w-24 h-24 bg-[var(--dark-accent)] rounded-full flex items-center justify-center mb-6 mx-auto relative overflow-hidden border-2 border-[var(--accent)]">
+              <i class="fas fa-user-tie text-3xl text-[var(--text-primary)]"></i>
+              <!-- Use actual image: <img src="path-to-image.jpg" alt="שם המפתח" class="w-full h-full object-cover"> -->
+            </div>
+            <h3 class="text-2xl font-bold text-[var(--white)] mb-3 text-center">[שמך]</h3>
+            <p class="text-[var(--text-white-subtle)] mb-6 text-center">
+              מפתח תוכנה
+            </p>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-graduation-cap text-[var(--text-primary)] mt-1 flex-shrink-0"></i>
+                <span>בוגר מדעי המחשב בטכניון</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-robot text-[var(--text-primary)] mt-1 flex-shrink-0"></i>
+                <span>מומחה לפיתוח אפליקציות עם AI</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-chalkboard-teacher text-[var(--text-primary)] mt-1 flex-shrink-0"></i>
+                <span>מעביר קורסים מתקדמים בתחום הטכנולוגיה</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-lightbulb text-[var(--text-primary)] mt-1 flex-shrink-0"></i>
+                <span>מלווה יזמים בפיתוח מוצרים טכנולוגיים</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Second Team Member -->
+        <div class="bg-[var(--light-bg)] rounded-xl shadow-lg border border-[var(--dark-accent)] overflow-hidden hover:shadow-[0_0_20px_rgba(201,174,211,0.15)] transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-r from-[var(--text-secondary)] to-[var(--accent)] h-2"></div>
+          <div class="p-8">
+            <div class="w-24 h-24 bg-[var(--dark-accent)] rounded-full flex items-center justify-center mb-6 mx-auto relative overflow-hidden border-2 border-[var(--text-secondary)]">
+              <i class="fas fa-camera text-3xl text-[var(--text-secondary)]"></i>
+              <!-- Use actual image: <img src="path-to-image.jpg" alt="שם הצלם" class="w-full h-full object-cover"> -->
+            </div>
+            <h3 class="text-2xl font-bold text-[var(--white)] mb-3 text-center">[שם השותף שלך]</h3>
+            <p class="text-[var(--text-white-subtle)] mb-6 text-center">
+              צלם מקצועי
+            </p>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-award text-[var(--text-secondary)] mt-1 flex-shrink-0"></i>
+                <span>צלם מקצועי זוכה פרסים</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-paint-brush text-[var(--text-secondary)] mt-1 flex-shrink-0"></i>
+                <span>מומחה במידול תמונה ווידאו עם AI</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-cubes text-[var(--text-secondary)] mt-1 flex-shrink-0"></i>
+                <span>יצירת תוכן חזותי מתקדם</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-sync-alt text-[var(--text-secondary)] mt-1 flex-shrink-0"></i>
+                <span>משלב אמנות, טכנולוגיה וחדשנות חזותית</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gradient-to-b from-[var(--background)] to-[#222]">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="inline-block mb-4">
+          <div class="px-4 py-2 bg-[var(--light-bg)] rounded-full text-sm font-medium text-[var(--text-primary)] border border-[var(--accent)]/50">
+            השירותים שלנו
+          </div>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[var(--white)]">
+          מה אנחנו <span class="text-gradient-primary">מציעים?</span>
+        </h2>
+        <p class="text-lg text-[var(--text-white-subtle)] max-w-2xl mx-auto">
+          אנחנו מתמחים בשלושה תחומים מרכזיים שמביאים את הכוח של בינה מלאכותית לעולם המעשי.
+        </p>
+      </div>
+
+      <!-- First Service: Digital Courses -->
+      <div class="max-w-6xl mx-auto mb-24">
+        <div class="bg-[var(--light-bg)] rounded-xl shadow-lg border border-[var(--dark-accent)] overflow-hidden animate-on-scroll">
+          <div class="p-8">
+            <div class="flex flex-col md:flex-row md:items-center gap-8">
+              <div class="md:w-1/4 flex justify-center">
+                <div class="w-24 h-24 rounded-full bg-[var(--dark-accent)] flex items-center justify-center text-[var(--text-primary)] border-2 border-[var(--text-primary)]/30">
+                  <i class="fas fa-graduation-cap text-4xl"></i>
+                </div>
+              </div>
+              <div class="md:w-3/4">
+                <h3 class="text-2xl font-bold text-[var(--white)] mb-4">קורסים דיגיטליים ללמידת AI בצורה מעשית</h3>
+                <p class="text-[var(--text-white-subtle)] mb-8">
+                  למד כיצד להשתמש בבינה מלאכותית לפיתוח אפליקציות, עיצוב ויזואלי, ויצירת תוכן - בצורה מעשית ומקצועית.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <!-- Course 1 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(178,210,114,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">פיתוח אפליקציות עם AI – גם בלי לדעת לתכנת</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      קורס מעשי לבניית אפליקציות בעזרת כלים כמו Lovable.dev ו-Base44
+                    </p>
+                    <a href="#" class="text-[var(--text-primary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לעמוד הקורס
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+
+                  <!-- Course 2 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(178,210,114,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">פיתוח ווב עם GenAI וטכנולוגיות של Google</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      ללמוד לבנות כמו מקצוענים עם Firebase, Next.js, Firestore
+                    </p>
+                    <a href="#" class="text-[var(--text-primary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לעמוד הקורס
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+
+                  <!-- Course 3 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(178,210,114,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">מידול תמונה וביגוד עם AI</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      קורס ייחודי שמלמד איך להלביש דוגמנים בפרטי לבוש דיגיטליים וליצור תוכן ויזואלי מהמם
+                    </p>
+                    <a href="https://www.softwarecreatorsai.com/ai-image-modeling" class="text-[var(--text-primary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לעמוד הקורס
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Service: Consulting -->
+      <div class="max-w-6xl mx-auto mb-24">
+        <div class="bg-[var(--light-bg)] rounded-xl shadow-lg border border-[var(--dark-accent)] overflow-hidden animate-on-scroll">
+          <div class="p-8">
+            <div class="flex flex-col md:flex-row md:items-center gap-8">
+              <div class="md:w-1/4 flex justify-center">
+                <div class="w-24 h-24 rounded-full bg-[var(--dark-accent)] flex items-center justify-center text-[var(--text-secondary)] border-2 border-[var(--text-secondary)]/30">
+                  <i class="fas fa-comments text-4xl"></i>
+                </div>
+              </div>
+              <div class="md:w-3/4">
+                <h3 class="text-2xl font-bold text-[var(--white)] mb-4">שירותי ייעוץ וליווי אישי</h3>
+                <p class="text-[var(--text-white-subtle)] mb-8">
+                  קבל ליווי אישי מקצועי והכוונה לפיתוח רעיונות, התייעלות טכנולוגית, או למידה אישית.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <!-- Consulting 1 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(201,174,211,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">ייעוץ ליזמים עם רעיונות טכנולוגיים</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      אסטרטגיית מוצר, MVP, גיוס צוותים, תכנון פיתוח חכם
+                    </p>
+                    <a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לעמוד הייעוץ
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+
+                  <!-- Consulting 2 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(201,174,211,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">ייעוץ לעסקים שרוצים לייעל תהליכים</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      איך להכניס כלים חכמים לעסק ולחסוך משאבים
+                    </p>
+                    <a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לעמוד הייעוץ
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+
+                  <!-- Consulting 3 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(201,174,211,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">פגישות ליווי לאנשים פרטיים</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      מתאים גם ללמידה אישית, גם להכוונה מקצועית
+                    </p>
+                    <a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לעמוד הייעוץ
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Service: Visual Content -->
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-[var(--light-bg)] rounded-xl shadow-lg border border-[var(--dark-accent)] overflow-hidden animate-on-scroll">
+          <div class="p-8">
+            <div class="flex flex-col md:flex-row md:items-center gap-8">
+              <div class="md:w-1/4 flex justify-center">
+                <div class="w-24 h-24 rounded-full bg-[var(--dark-accent)] flex items-center justify-center text-[var(--text-primary)] border-2 border-[var(--text-primary)]/30">
+                  <i class="fas fa-camera text-4xl"></i>
+                </div>
+              </div>
+              <div class="md:w-3/4">
+                <h3 class="text-2xl font-bold text-[var(--white)] mb-4">שירותי יצירת תוכן חזותי עם AI</h3>
+                <p class="text-[var(--text-white-subtle)] mb-8">
+                  צור תוכן חזותי מקצועי באמצעות טכנולוגיות AI מתקדמות - בלי צורך בצילומי סטודיו יקרים.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <!-- Visual 1 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(178,210,114,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">מידול תמונה מקצועי</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      לבגדים, מוצרים, דוגמנים ודוגמניות – בלי צילום סטודיו
+                    </p>
+                    <a href="#" class="text-[var(--text-primary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לפרטים נוספים
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+
+                  <!-- Visual 2 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(178,210,114,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">הפקת תוכן עם כלי AI מובילים</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      Midjourney, Runway, D-ID וכלים מתקדמים נוספים
+                    </p>
+                    <a href="#" class="text-[var(--text-primary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לפרטים נוספים
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+
+                  <!-- Visual 3 -->
+                  <div class="bg-[var(--dark-accent)] rounded-lg p-5 hover:shadow-[0_0_15px_rgba(178,210,114,0.2)] transition-all transform hover:-translate-y-1 border border-[var(--dark-accent)]">
+                    <h4 class="text-lg font-semibold text-[var(--white)] mb-3">יצירת וידאו שיווקי וקריאייטיבי</h4>
+                    <p class="text-sm text-[var(--text-white-subtle)] mb-4">
+                      וידאו מרשים ומקצועי בעזרת בינה מלאכותית
+                    </p>
+                    <a href="#" class="text-[var(--text-primary)] hover:text-[var(--accent)] inline-flex items-center text-sm font-medium">
+                      לפרטים נוספים
+                      <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="py-20 bg-gradient-to-b from-[#222] to-[var(--background)]">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="inline-block mb-4">
+          <div class="px-4 py-2 bg-[var(--light-bg)] rounded-full text-sm font-medium text-[var(--text-primary)] border border-[var(--accent)]/50">
+            יתרונות
+          </div>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[var(--white)]">
+          למה <span class="text-gradient-primary">לבחור בנו?</span>
+        </h2>
+        <p class="text-lg text-[var(--text-white-subtle)] max-w-2xl mx-auto">
+          אנחנו משלבים ידע טכנולוגי עמוק עם יצירתיות חזותית יוצאת דופן כדי להביא לך את התוצאות הטובות ביותר.
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll">
+          <!-- Left Column -->
+          <div class="bg-[var(--light-bg)] rounded-xl shadow-lg border border-[var(--dark-accent)] p-8">
+            <ul class="space-y-6">
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[var(--dark-accent)] flex items-center justify-center">
+                  <div class="w-5 h-5 rounded-full bg-[var(--text-primary)]/20 flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[var(--text-primary)]"></div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-[var(--white)] mb-1">ידע טכנולוגי עמוק</h3>
+                  <p class="text-sm text-[var(--text-white-subtle)]">צוות של מומחים עם השכלה אקדמית ורקע מקצועי, בדגש על שילוב טכנולוגיה מתקדמת עם יצירתיות.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[var(--dark-accent)] flex items-center justify-center">
+                  <div class="w-5 h-5 rounded-full bg-[var(--text-primary)]/20 flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[var(--text-primary)]"></div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-[var(--white)] mb-1">ניסיון מוכח</h3>
+                  <p class="text-sm text-[var(--text-white-subtle)]">ליווינו יזמים רבים ובנינו מוצרים אמיתיים. אנחנו יודעים מה עובד ומה דורש בעולם הטכנולוגיה.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column -->
+          <div class="bg-[var(--light-bg)] rounded-xl shadow-lg border border-[var(--dark-accent)] p-8">
+            <ul class="space-y-6">
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[var(--dark-accent)] flex items-center justify-center">
+                  <div class="w-5 h-5 rounded-full bg-[var(--text-secondary)]/20 flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[var(--text-secondary)]"></div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-[var(--white)] mb-1">התמחות בכלי AI מובילים</h3>
+                  <p class="text-sm text-[var(--text-white-subtle)]">אנחנו לא רק מכירים את כלי ה-AI המובילים בעולם, אנחנו מומחים בשימוש בהם לתוצאות מיטביות.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[var(--dark-accent)] flex items-center justify-center">
+                  <div class="w-5 h-5 rounded-full bg-[var(--text-secondary)]/20 flex items-center justify-center">
+                    <div class="w-3 h-3 rounded-full bg-[var(--text-secondary)]"></div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-[var(--white)] mb-1">דגש על פרקטיקה</h3>
+                  <p class="text-sm text-[var(--text-white-subtle)]">אנחנו מתמקדים בתוצאות, בהבנה אמיתית ובפרקטיקה - לא רק בתיאוריה. כל מה שאנחנו מלמדים או עושים, נבדק בשטח.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gradient-to-b from-[var(--background)] to-[#222]">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto bg-[var(--light-bg)] rounded-2xl shadow-xl border border-[var(--dark-accent)] overflow-hidden animate-on-scroll">
+        <div class="grid grid-cols-1 md:grid-cols-5">
+          <div class="p-8 md:col-span-3 text-center md:text-right">
+            <h2 class="text-3xl font-bold mb-4 text-[var(--white)]">רוצה לשמוע עוד או <span class="text-gradient-primary">להתייעץ?</span></h2>
+            <p class="text-[var(--text-white-subtle)] mb-8">
+              אנחנו זמינים לפגישה ראשונית, שאלות או שיחה לא מחייבת.
+              בוא נבין יחד איך אפשר לקדם את הרעיון או המיזם שלך – או פשוט ללמוד משהו חדש.
+            </p>
+
+            <a href="https://www.softwarecreatorsai.com/contact-us" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-[var(--background)] bg-gradient-to-r from-[var(--text-primary)] to-[var(--accent)] hover:brightness-110 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 mb-4">
+              דברו איתנו עכשיו
+              <i class="fas fa-comments mr-2"></i>
+            </a>
+
+            <div class="mt-8 space-y-4">
+              <div class="flex items-center justify-center md:justify-end gap-3">
+                <span class="text-[var(--text-white-subtle)]">אימייל:</span>
+                <a class="text-[var(--text-primary)] hover:text-[var(--accent)]">softwarecreatorsai@hotmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 md:col-span-2 bg-[var(--dark-accent)]/50 flex items-center justify-center">
+            <div class="w-full max-w-sm">
+              <div class="text-center mb-6">
+                <i class="fas fa-envelope-open-text text-5xl text-[var(--text-secondary)]"></i>
+                <h3 class="text-xl font-semibold mt-4 text-[var(--white)]">נשמח להקשיב לכם</h3>
+                <p class="text-sm text-[var(--text-white-subtle)]">אנחנו עונים לכל פניה תוך 24 שעות</p>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-[var(--text-primary)] mt-1"></i>
+                  <span class="text-sm text-[var(--text-white-subtle)]">צרו קשר לפגישת ייעוץ ראשונית</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-[var(--text-primary)] mt-1"></i>
+                  <span class="text-sm text-[var(--text-white-subtle)]">אפשרות לליווי מתמשך או פרויקטים חד פעמיים</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-[var(--background)] border-t border-[var(--dark-accent)]">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold text-[var(--white)]">מתוכן לתוכנה</h2>
+            <p class="text-sm text-[var(--text-white-subtle)]">פיתוח. ויזואל. בינה מלאכותית.</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="flex items-center gap-6">
+              <a href="https://www.facebook.com/groups/1155534872864774" class="text-[var(--text-white-subtle)] hover:text-[var(--text-primary)] transition-colors">
+                <i class="fab fa-facebook-f text-xl"></i>
+              </a>
+              <a href="https://www.instagram.com/software.creators.ai" class="text-[var(--text-white-subtle)] hover:text-[var(--text-primary)] transition-colors">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/nadav-naveh/" class="text-[var(--text-white-subtle)] hover:text-[var(--text-primary)] transition-colors">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="https://www.youtube.com/@softwarecreatorsai" class="text-[var(--text-white-subtle)] hover:text-[var(--text-primary)] transition-colors">
+                <i class="fab fa-youtube text-xl"></i>
+              </a>
+              <a href="https://www.tiktok.com/@software.creators.ai" class="text-[var(--text-white-subtle)] hover:text-[var(--text-primary)] transition-colors">
+                <i class="fab fa-tiktok text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-4 mb-6">
+            <a href="#" class="text-sm text-[var(--text-white-subtle)] hover:text-[var(--text-primary)]">קורסי AI לפיתוח תוכנה</a>
+            <span class="text-[var(--dark-accent)]">|</span>
+            <a href="#" class="text-sm text-[var(--text-white-subtle)] hover:text-[var(--text-primary)]">קורס מידול תמונה עם AI</a>
+            <span class="text-[var(--dark-accent)]">|</span>
+            <a href="#" class="text-sm text-[var(--text-white-subtle)] hover:text-[var(--text-primary)]">שירותי ייעוץ וליווי</a>
+          </div>
+
+          <div class="text-xs text-[var(--text-white-subtle)]/60">
+            © [שם העסק שלכם] | כל הזכויות שמורות | 2025
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="fixed bottom-6 left-6 w-12 h-12 rounded-full bg-[var(--accent)] text-[var(--background)] shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-[var(--text-primary)] transform hover:scale-110 z-50">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Handle smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#' || targetId.startsWith('#purchase')) return;
+
+          e.preventDefault();
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // For mobile touch devices, use a timeout to ensure click registers
+            setTimeout(() => {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              
+              // Additional fix for mobile - focus the target element
+              targetElement.setAttribute('tabindex', '-1');
+              targetElement.focus();
+            }, 100);
+          }
+        });
+        
+        // Add touch event for mobile
+        anchor.addEventListener('touchend', function(e) {
+          this.click();
+        });
+      });
+    });
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -10% 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.7s ease-out, transform 0.7s ease-out';
+      observer.observe(el);
+    });
+
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove('opacity-0', 'invisible');
+          backToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'invisible');
+          backToTopBtn.classList.remove('opacity-100', 'visible');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Add touch event for mobile
+      backToTopBtn.addEventListener('touchend', function(e) {
+        this.click();
+      });
+    }
+  </script>
+</body>
+</html>
