@@ -7,6 +7,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+  <script>
+    // optional init
+    window.onload = function() {
+      window.micAccessTool = new MicAccessTool({
+        link: 'https://www.softwarecreatorsai.com/נגישות',
+        contact: 'mailto:softwarecreatorsai@hotmail.com',
+        buttonPosition: 'left', // default is 'left'
+        //forceLang: 'ru-RU' // default is 'en' may be 'he-IL', 'ru-RU', or 'fr_FR' - REMOVED for auto language detection
+      });
+    }
+  </script>
   <style>
     :root {
         --background: #1a1a1a;
@@ -484,10 +496,10 @@
       <div class="max-w-4xl mx-auto bg-[var(--light-bg)] rounded-2xl shadow-xl border border-[var(--dark-accent)] overflow-hidden animate-on-scroll">
         <div class="grid grid-cols-1 md:grid-cols-5">
           <div class="p-8 md:col-span-3 text-center md:text-right">
-            <h2 class="text-3xl font-bold mb-4 text-[var(--white)]">רוצה לשמוע עוד או <span class="text-gradient-primary">להתייעץ?</span></h2>
+            <h2 class="text-3xl font-bold mb-4 text-[var(--white)]">רוצה לשמו� עוד או <span class="text-gradient-primary">להתייעץ?</span></h2>
             <p class="text-[var(--text-white-subtle)] mb-8">
               אנחנו זמינים לפגישה ראשונית, שאלות או שיחה לא מחייבת.
-              בוא נבין יחד איך אפשר לקדם את הרעיון או המיזם שלך – או פשוט ללמוד משהו חדש.
+              בו� נבין יחד איך אפשר לקדם את הרעיון או המיזם שלך – או פשוט ללמוד משהו חדש.
             </p>
 
             <a href="https://www.softwarecreatorsai.com/contact-us"target="_blank" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-[var(--background)] bg-gradient-to-r from-[var(--text-primary)] to-[var(--accent)] hover:brightness-110 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 mb-4">
